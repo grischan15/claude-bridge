@@ -1,0 +1,26 @@
+# Abhaengigkeiten
+node_modules/
+
+# Build und Coverage
+dist/
+coverage/
+
+# Umgebung und Geheimnisse
+.env
+.env.*
+token.txt
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor und Betriebssystem
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Lokale Claude-Code-Einstellungen
+.claude/settings.local.json
