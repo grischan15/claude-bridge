@@ -26,6 +26,9 @@ Abo, nicht über einen API-Key.
 - [Grenzen](#grenzen)
 - [Lizenz](#lizenz)
 
+**Ausführliche Erklärung mit allen Abläufen (Was, Wie, Warum, Alltagsbild):**
+[Claude-Bridge Bauplan](https://claude.ai/artifact/2mejx5sucT1gdPXL8U9vWa)
+
 Die ausführliche Schritt-für-Schritt-Installation steht in **[INSTALLATION.md](INSTALLATION.md)**.
 Den vollständigen Request-Vertrag mit allen Feldern findest du in
 **[docs/consumer-guide.md](docs/consumer-guide.md)**.
