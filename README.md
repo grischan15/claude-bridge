@@ -1,5 +1,15 @@
 # Claude-Bridge
 
+<p>
+  <a href="https://claude.ai/artifact/2mejx5sucT1gdPXL8U9vWa"><img alt="Bauplan lesen" src="https://img.shields.io/badge/Bauplan_lesen-%E2%86%92-D1593B?style=for-the-badge"></a>
+  <a href="INSTALLATION.md"><img alt="Installation" src="https://img.shields.io/badge/Installation-8_Schritte-385453?style=for-the-badge"></a>
+  <a href="https://github.com/grischan15/claude-bridge"><img alt="Code auf GitHub" src="https://img.shields.io/badge/Code_auf_GitHub-grischan15%2Fclaude--bridge-1A2C46?style=for-the-badge&logo=github&logoColor=F4F0E1"></a>
+</p>
+
+```bash
+git clone https://github.com/grischan15/claude-bridge.git
+```
+
 Eine kleine lokale Bridge, über die deine eigenen Web-Apps die `claude`-CLI ansprechen.
 Die App schickt einen Prompt per HTTP, die Bridge startet `claude` als Unterprozess und
 streamt die Antwort live zurück (Server-Sent Events).
