@@ -34,6 +34,7 @@ Abo, nicht über einen API-Key.
 - [Projektstruktur](#projektstruktur)
 - [Entwicklung](#entwicklung)
 - [Grenzen](#grenzen)
+- [Mehrere Agents: p3-dispatch](#mehrere-agents-p3-dispatch)
 - [Lizenz](#lizenz)
 
 **Ausführliche Erklärung mit allen Abläufen (Was, Wie, Warum, Alltagsbild):**
@@ -230,6 +231,22 @@ Host (`127.0.0.1`) und Port (`7777`) stehen fest in `src/config.ts`.
 - **Abo-Bedingungen.** Dein Claude-Abo ist für deine persönliche Nutzung gedacht. Willst du Kunden oder Besucher Läufe auslösen lassen, ist die Claude-API mit eigenem Key der richtige Weg. Lies die aktuellen Bedingungen von Anthropic.
 - **Kosten-Anzeige.** `totalCostUsd` meldet die CLI immer. Bei einem Abo ist das eine Anzeige, keine Rechnung.
 - **Kein Verlauf.** Die Bridge speichert keine Läufe und keine Logs.
+- **Ein Auftrag, ein Modell.** Die Bridge spricht nur `claude` an und arbeitet keine Pläne mit mehreren Schritten ab. Dafür gibt es p3-dispatch (nächster Abschnitt).
+
+---
+
+## Mehrere Agents: p3-dispatch
+
+Die Bridge beantwortet einzelne Aufträge. Willst du einen ganzen Plan abarbeiten lassen,
+mit mehreren KI-Helfern parallel, nimm das Schwesterprojekt
+**[p3-dispatch](https://github.com/grischan15/p3-dispatch)**:
+
+- ein Controller verteilt die Aufgaben eines Plans, sobald ihre Abhängigkeiten fertig sind
+- Claude (`claude -p`) und optional Codex (`codex exec`) arbeiten je in einem eigenen Git-Worktree
+- der jeweils andere Anbieter prüft das Ergebnis, bevor es gemergt wird
+- läuft ebenfalls nur über deine Abo-Logins, ohne API-Keys
+
+Im Bild: Die Bridge ist der Empfang, p3-dispatch der Projektleiter, der mehrere Experten einteilt.
 
 ---
 
